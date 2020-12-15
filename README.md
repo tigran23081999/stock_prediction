@@ -1,4 +1,4 @@
-# Forecasting exchange rates and stock prices using random processes
+# Forecasting exchange rates and stock prices using stochastic processes
 Nowadays, more and more people are investing in investments, which raises a problem: How to find interesting investment instruments and how to predict how they will behave in the future? To answer this question, we turn to the models from the course on random processes. To begin with, let's understand how the process describes the price of stocks, currencies. If the values ​​of a variable change unpredictably over time, then they say that it obeys a stochastic process.
 
 We will predict the stock price using the Ito formula, which is widely used to model the stock price.
