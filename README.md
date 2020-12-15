@@ -1,18 +1,18 @@
-# Прогнозирование курса валют и стоимости акций с помощью случайных процессов
-В наши дни все больше людей вкладывают свои средства в инвестции, в связи с этим возникает проблема: Как найти интересные инструмены для инвестирования и как предсказать как они будут вести себя в будущем? Чтобы ответить на этот вопрос, обратимся к моделям из курса по случайным процессам. Для начала поймем, каким процессом описываетя курс акций, валют. Если значения переменной непредсказуемо меняются во времени, то говорят что она подчиняется стохастическому процессу.
+# Forecasting exchange rates and stock prices using random processes
+Nowadays, more and more people are investing in investments, which raises a problem: How to find interesting investment instruments and how to predict how they will behave in the future? To answer this question, we turn to the models from the course on random processes. To begin with, let's understand how the process describes the price of stocks, currencies. If the values ​​of a variable change unpredictably over time, then they say that it obeys a stochastic process.
 
-Прогнозировать курс акции мы будем с помощью формулы Ито, которая широко используется для моделирования цены акции.
-В основу этой формулы заложены две важные величины. Это волатильность и доходность, которые необходимо найти, чтобы мы могли делать вычисления по нашей исходной формуле. Волатильность в широком смысле - это мера риска инвестиции. Чем выше волатильность, тем выше риск, но и тем выше доходность. Ведь в основах корпоративных финансах заложено, что доходность растет с увеличение риска. Также понять волатильность можно с помощью эксперимента бросания шарика в лунки. Это вы сможете детально увидеть с иллюстрациями в notebook файле. Все формулы, определения также детально описаны в этом файле.
-Доходность мы вычисляем по финансовой модели CAPM.
-Вычислив доходность и волатильность, мы можем вставить их в нашу формулу и тогда мы уже получим готовую формулу по предсказанию курса для конкретного актива.
+We will predict the stock price using the Ito formula, which is widely used to model the stock price.
+This formula is based on two important values. It is the volatility and profitability that needs to be found so that we can make calculations with our original formula. Volatility in a broad sense is a measure of the risk of an investment. The higher the volatility, the higher the risk, but also the higher the return. Indeed, the fundamentals of corporate finance are based on the fact that profitability grows with increasing risk. You can also understand volatility using the experiment of throwing a ball into holes. You can see this in detail with illustrations in the notebook file. All formulas, definitions are also described in detail in this file.
+We calculate the profitability using the CAPM financial model.
+Having calculated the profitability and volatility, we can insert them into our formula, and then we will already receive a ready-made formula for predicting the rate for a particular asset.
 
-Также мы написали програму, которая визуализирует траектории случайного процесса и выдает итоговое занченик курса акции.
-Но чтобы мы могли понять насколько наша модель работает хорошо, мы написали программу, которая делает прогноз с помощью машинного обучения. Мы сделали программу, которая прогнозирует курса доллара, который сильно завсисит от курса нефти. Марку нефти мы брали Brent. Для предсказания мы использовали базу данных yahoo finance, но она недостаточно полна, чтобы можно было сделать хороший прогноз. Поэтому мы решили брать данные из конкретных баз данных, которые следят за нужными величинами. Рассмотреть ее можно на примере прогноза российского индекса РТС
+We also wrote a program that visualizes the trajectories of a random process and gives the final value of the stock rate.
+But so that we can understand how well our model works, we wrote a program that makes predictions using machine learning. We have made a program that predicts the dollar rate, which strongly depends on the oil rate. We took the oil grade Brent. We used the yahoo finance database for prediction, but it is not complete enough to make a good prediction. Therefore, we decided to take data from specific databases that track the required values. It can be considered using the example of the forecast of the Russian RTS index
 
-В итоге протестировав нашу модель на нескольких активах, мы получили, что она работает достаточно точно. 
-Например, корееляцию прогноза курса доллара с истинными значениями курса была около 0,8, что является хорошим результатом и что подтвердило наши предположения по поводу зависимости российской эеономики от нефти. Правда наша модель работает хорошо в некризисные времена, возможно она может дать точный результат в кризисное время, но все таки лучше она работает в некризисные времена.
+As a result, having tested our model on several assets, we got that it works quite accurately.
+For example, the correlation of the dollar exchange rate forecast with true exchange rate values ​​was about 0.8, which is a good result and which confirmed our assumptions about the dependence of the Russian eeonomy on oil. True, our model works well in non-crisis times, perhaps it can give an accurate result in times of crisis, but still it works better in non-crisis times.
 
-Таким образом мы определили модель предсказания курса. Все теоретические и вычислительные подробности вы можете посмотреть в ipynb файле.
+Thus, we have defined the rate prediction model. All theoretical and computational details can be found in the ipynb file.
 
-Если у вас возникли какие-либо вопросы, я с удовольствием могу ответить на них. Пишите на почту: osipyan.tr@phystech.edu
-Спасибо за внимание!
+If you have any questions, I am happy to answer them. Write to mail: osipyan.tr@phystech.edu
+Thanks for attention!
